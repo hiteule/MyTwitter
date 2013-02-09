@@ -1,0 +1,29 @@
+#sidebar .myTwitter .date, #main .myTwitter .date {
+	float: right;
+	font-size: 12px;
+}
+#sidebar .myTwitter .date a, #main .myTwitter .date a {
+	color: #999;
+}
+#sidebar .myTwitter .author, #main .myTwitter .author {
+	margin-bottom: 2px;
+}
+#sidebar .myTwitter .author .screenname, #main .myTwitter .author .screenname {
+	color: #999;
+	font-size: 12px;
+}
+#sidebar .myTwitter .author .screenname .at, #main .myTwitter .author .screenname .at {
+	color: #bbb;
+}
+#sidebar .myTwitter .author a.name, #main .myTwitter .author a.name {
+	font-weight: bold;
+}
+#main .myTwitter ul {
+	margin: 0;
+	padding: 0;
+	list-style-type: none;
+}
+#main .myTwitter li {
+	padding: 7px 0;
+	border-bottom: 1px dotted;
+}

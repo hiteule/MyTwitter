@@ -1,0 +1,58 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+"http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="{{tpl:BlogLanguage}}" lang="{{tpl:BlogLanguage}}">
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+  <meta name="MSSmartTagsPreventParsing" content="TRUE"/>
+  <title>{{tpl:lang Public example}} - {{tpl:BlogName encode_html="1"}}</title>
+  {{tpl:include src="_head.html"}}
+</head>
+
+<body class="dc-myTwitter">
+<div id="page">
+{{tpl:include src="_top.html"}}
+
+<div id="wrapper">
+
+<div id="main">
+  <div id="content">
+
+  <div id="content-info">
+    <h2></h2>
+  </div>
+
+  <div class="content-inner myTwitter">
+    <ul>
+      <tpl:tweets>
+        <li>
+          <div class=\"date\"><a target=\"_blank\" href=\"%1\$s\">%2\$s</a></div>
+          <div class=\"author\">
+            <a class=\"name\" target=\"_blank\" href=\"%3\$s\">%4\$s</a>
+            <span class=\"screename\"><span class=\"at\">@</span>%5\$s</span>
+          </div>
+          %6\$s
+        </li>
+      </tpl:tweets>
+    </ul>
+
+  </div>
+
+  </div>
+</div> <!-- End #main -->
+
+<div id="sidebar">
+  <div id="blognav">
+    {{tpl:Widgets type="nav"}}
+  </div> <!-- End #blognav -->
+
+  <div id="blogextra">
+    {{tpl:Widgets type="extra"}}
+  </div> <!-- End #blogextra -->
+</div>
+
+</div> <!-- End #wrapper -->
+
+{{tpl:include src="_footer.html"}}
+</div> <!-- End #page -->
+</body>
+</html>
