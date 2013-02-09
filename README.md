@@ -1,6 +1,6 @@
 # My Twitter
 
-A dotclear plugin to display your Twitter timeline in your blog with a widget.
+A Dotclear plugin to display your Twitter timeline in your blog with a widget.
 
 ## Goals
 
@@ -15,7 +15,7 @@ This plugin require Dotclear 2.3 or later.
 
 ## Usage
 
-Upload the repository content into /puglins/mytwitter folder of your Dotclear installation and activate this plugin on the plugin manager.
+Upload the repository content into /puglins/myTwitter folder of your Dotclear installation and activate this plugin on the plugin manager.
 Finally go to the configuration page of My Twitter and configure it.
 
 ## Change History
