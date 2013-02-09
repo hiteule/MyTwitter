@@ -11,5 +11,3 @@ $GLOBALS['__l10n']['Recreate my access token'] = 'Recréer mes access token';
 $GLOBALS['__l10n']['The update of user access token / secret failed. Please verify your application parameters.'] = 'La mise à jour des access token / secret pour l\'utilisateur a échoué. Merci de vérifier les paramètres de l\'application';
 $GLOBALS['__l10n']['The user access token / secret as been updated.'] = 'Les access token / secret de l\'utilisateur ont été mis à jour.';
 $GLOBALS['__l10n']['The application parameters as been updated.'] = 'Les paramètres de l\'application ont été mis à jour.';
-$GLOBALS['__l10n'][''] = '';
-$GLOBALS['__l10n'][''] = '';
