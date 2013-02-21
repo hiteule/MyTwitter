@@ -14,19 +14,19 @@ class myTwitterWidgetBehaviors
 	{
 		global $core;
 
-		if (
-			!isset($core->blog->settings->mytwitter->app_token)
-			|| !isset($core->blog->settings->mytwitter->app_secret)
-			|| !isset($core->blog->settings->mytwitter->user_token)
-			|| !isset($core->blog->settings->mytwitter->user_secret)
-			|| empty($core->blog->settings->mytwitter->app_token)
-			|| empty($core->blog->settings->mytwitter->app_secret)
-			|| empty($core->blog->settings->mytwitter->user_token)
-			|| empty($core->blog->settings->mytwitter->user_secret)
-		) {
+		if (!is_object($core->blog->settings->mytwitter)) {
 			return;
 		}
-		
+
+		$appToken   = $core->blog->settings->mytwitter->app_token;
+		$appSecret  = $core->blog->settings->mytwitter->app_secret;
+		$userToken  = $core->blog->settings->mytwitter->user_token;
+		$userSecret = $core->blog->settings->mytwitter->user_secret;
+
+		if (empty($appToken) || empty($appSecret) || empty($userToken) || empty($userSecret)) {
+			return;
+		}
+
 		$w->create(
 			'MyTwitterWidget',
 			'My Twitter',
