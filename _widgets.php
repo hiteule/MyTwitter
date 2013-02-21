@@ -12,6 +12,21 @@ class myTwitterWidgetBehaviors
 {
 	public static function initMyTwitterWidgets($w)
 	{
+		global $core;
+
+		if (
+			!isset($core->blog->settings->mytwitter->app_token)
+			|| !isset($core->blog->settings->mytwitter->app_secret)
+			|| !isset($core->blog->settings->mytwitter->user_token)
+			|| !isset($core->blog->settings->mytwitter->user_secret)
+			|| empty($core->blog->settings->mytwitter->app_token)
+			|| empty($core->blog->settings->mytwitter->app_secret)
+			|| empty($core->blog->settings->mytwitter->user_token)
+			|| empty($core->blog->settings->mytwitter->user_secret)
+		) {
+			return;
+		}
+		
 		$w->create(
 			'MyTwitterWidget',
 			'My Twitter',

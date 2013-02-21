@@ -60,6 +60,10 @@ class publicMyTwitterWidget
 			return;
 		}
 
+		if (!isset($core->blog->settings->mytwitter->app_token) || !isset($core->blog->settings->mytwitter->app_secret)) {
+			return;
+		}
+
 		$appToken  = $core->blog->settings->mytwitter->app_token;
 		$appSecret = $core->blog->settings->mytwitter->app_secret;
 		$mt = new myTwitter($appToken, $appSecret);
