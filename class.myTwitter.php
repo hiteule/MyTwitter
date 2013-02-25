@@ -177,7 +177,7 @@ class myTwitter extends tmhOAuth
         );
         $cache = json_encode($cache);
 
-        file_put_contents($this->_cacheFileName, $cache);
+        @file_put_contents($this->_cacheFileName, $cache);
     }
 
     private function _getCache()
@@ -186,7 +186,7 @@ class myTwitter extends tmhOAuth
             return false;
         }
 
-        $cache = file_get_contents($this->_cacheFileName);
+        $cache = @file_get_contents($this->_cacheFileName);
 
         if ($cache !== false) {
             $cache = json_decode($cache, true);
