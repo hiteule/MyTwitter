@@ -67,9 +67,13 @@ class myTwitter extends tmhOAuth
                 $tokens = $this->extract_params($this->response['response']);
             
                 if (!empty($tokens['oauth_token']) && !empty($tokens['oauth_token_secret']) && !empty($tokens['user_id'])) {
-                    $core->blog->settings->mytwitter->put('user_token', $tokens['oauth_token'], 'string');
-					$core->blog->settings->mytwitter->put('user_secret', $tokens['oauth_token_secret'], 'string');
-					$core->blog->settings->mytwitter->put('user_id', $tokens['user_id'], 'string');
+                    $s =& $core->blog->settings->mytwitter;
+                    $s->put('user_token', $tokens['oauth_token'], 'string');
+                    $s->user_token = $tokens['oauth_token'];
+                    $s->put('user_secret', $tokens['oauth_token_secret'], 'string');
+                    $s->user_secret = $tokens['oauth_token_secret'];
+                    $s->put('user_id', $tokens['user_id'], 'string');
+                    $s->user_id = $tokens['user_id'];
 
                     return true;
                 }
