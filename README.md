@@ -19,7 +19,7 @@ Upload the repository content into /puglins/myTwitter folder of your Dotclear in
 Finally go to the configuration page of My Twitter and configure it.
 
 ## Change History
-### 1.0 - 09 February 2013
+### 1.0 - 02 March 2013
 
 - Initial version
 
