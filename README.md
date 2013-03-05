@@ -25,7 +25,7 @@ Finally go to the configuration page of My Twitter and configure it.
 
 ## Community
 
-License: Creative Commons BY-SA 3.0 (see <http://creativecommons.org/licenses/by-sa/3.0/>)
+License: GNU General Public License (see <http://www.gnu.org/licenses/gpl.txt>)
 
 Follow me on Twitter [@hiteule](https://twitter.com/intent/follow?screen_name=hiteule) to receive updates on releases, or ask for support.
 
