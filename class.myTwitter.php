@@ -161,6 +161,7 @@ class myTwitter extends tmhOAuth
                     'hashtags'      => $v['entities']['hashtags'],
                     'urls'          => $v['entities']['urls'],
                     'user_mentions' => $v['entities']['user_mentions'],
+                    'media'         => isset($v['entities']['media']) ? $v['entities']['media'] : array(),
                 );
             }
         }
@@ -199,7 +200,7 @@ class myTwitter extends tmhOAuth
         return $cache;
     }
 
-    public static function formatTweet($text, $hashtags = array(), $urls = array(), $user_mentions = array())
+    public static function formatTweet($text, $hashtags = array(), $urls = array(), $user_mentions = array(), $media = array())
     {
         $text = htmlentities($text);
 
@@ -211,6 +212,9 @@ class myTwitter extends tmhOAuth
         }
         foreach ($user_mentions as $kUm => $vUm) {
             $text = str_replace('@' . htmlentities($vUm['screen_name']), '<a href="http://twitter.com/' . htmlentities($vUm['screen_name']) . '" target="_blank">@' . htmlentities($vUm['screen_name']) . '</a>', $text);
+        }
+        foreach ($media as $kM => $vM) {
+            $text = str_replace($vM['url'], '<a href="' . $vM['url'] . '" target="_blank">' . $vM['display_url'] . '</a>', $text);
         }
 
         return $text;

@@ -43,7 +43,7 @@ class myTwitterTpl
 			$profilUrl  = "http://twitter.com/" . htmlentities($v["username"]);
 			$name       = htmlentities($v["name"]);
 			$screenname = htmlentities($v["username"]);
-			$text       = myTwitter::formatTweet($v["text"], $v["hashtags"], $v["urls"], $v["user_mentions"]);
+			$text       = myTwitter::formatTweet($v["text"], $v["hashtags"], $v["urls"], $v["user_mentions"], $v["media"]);
 			echo sprintf("' . $content . '", $tweetUrl, $date, $profilUrl, $name, $screenname, $text);
 		}
 		?>');
@@ -79,7 +79,7 @@ class publicMyTwitterWidget
 		foreach ($tweets as $k => $v) {
 			$date = myTwitter::formatDate($v['created_at']);
 
-			$text = myTwitter::formatTweet($v['text'], $v['hashtags'], $v['urls'], $v['user_mentions']);
+			$text = myTwitter::formatTweet($v['text'], $v['hashtags'], $v['urls'], $v['user_mentions'], $v['media']);
 
 			$html .= '<li>';
 			$html .= '<div class="date"><a href="http://twitter.com/' . htmlentities($v['username']) . '/status/' . (int)$v['id'] . '" target="_blank">' . $date . '</a></div>';
