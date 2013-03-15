@@ -7,7 +7,7 @@ $this->registerModule(
 	"MyTwitter",
 	"Display your Tweet in your blog",
 	"Hiteule",
-	"1.0",
+	"1.0.1",
 	"usage,contentadmin"
 );
 ?>
