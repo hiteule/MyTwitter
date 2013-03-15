@@ -10,12 +10,14 @@ if (version_compare($iVersion, $mVersion, '>=')) {
 	return;
 }
 
-$core->blog->settings->addNamespace('mytwitter');
+if ($iVersion == '1.0') {
+	$core->blog->settings->addNamespace('mytwitter');
 
-$core->blog->settings->mytwitter->put('app_token', '', 'string', null, false);
-$core->blog->settings->mytwitter->put('app_secret', '', 'string', null, false);
-$core->blog->settings->mytwitter->put('user_token', '', 'string', null, false);
-$core->blog->settings->mytwitter->put('user_secret', '', 'string', null, false);
-$core->blog->settings->mytwitter->put('user_id', '', 'string', null, false);
+	$core->blog->settings->mytwitter->put('app_token', '', 'string', null, false);
+	$core->blog->settings->mytwitter->put('app_secret', '', 'string', null, false);
+	$core->blog->settings->mytwitter->put('user_token', '', 'string', null, false);
+	$core->blog->settings->mytwitter->put('user_secret', '', 'string', null, false);
+	$core->blog->settings->mytwitter->put('user_id', '', 'string', null, false);
+}
 
 $core->setVersion('myTwitter', $mVersion);
