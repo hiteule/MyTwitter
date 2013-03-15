@@ -6,7 +6,7 @@ A Dotclear plugin to display your Twitter timeline in your blog with a widget.
 
 - Based on Twitter API 1.1
 - Support mention and retweet
-- Link, username and hashtag are cliquable
+- Link, username and hashtag are clickable
 - English and French translation
 
 ## Dependencies
@@ -19,6 +19,11 @@ Upload the repository content into /puglins/myTwitter folder of your Dotclear in
 Finally go to the configuration page of My Twitter and configure it.
 
 ## Change History
+### 1.0.1 - 15 March 2013
+
+- Add favorite support on the back office
+- Add media url support (The urls are now clickable)
+
 ### 1.0 - 02 March 2013
 
 - Initial version
